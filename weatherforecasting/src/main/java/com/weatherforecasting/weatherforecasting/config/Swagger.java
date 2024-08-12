@@ -10,11 +10,16 @@ public class Swagger {
 
     @Bean
     public OpenAPI api() {
-        return new OpenAPI()
+        try {
+            return new OpenAPI()
                 .info(new Info()
                         .title("Weather Forecasting API")
                         .version("1.0")
                         .description("Weather Forecasting API")
                 );
+        } catch(Exception e) {
+            System.err.println("Error configuring OpenAPI: " + e.getMessage());
+            throw e;
+        }
     }
 }
