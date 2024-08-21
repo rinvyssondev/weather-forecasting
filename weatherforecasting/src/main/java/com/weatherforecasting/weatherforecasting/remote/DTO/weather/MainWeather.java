@@ -1,4 +1,4 @@
-package com.weatherforecasting.weatherforecasting.remote.DTO;
+package com.weatherforecasting.weatherforecasting.remote.DTO.weather;
 
 public class MainWeather {
     private double temp;
