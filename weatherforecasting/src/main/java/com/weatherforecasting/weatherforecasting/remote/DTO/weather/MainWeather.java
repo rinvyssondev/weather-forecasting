@@ -1,18 +1,20 @@
 package com.weatherforecasting.weatherforecasting.remote.DTO.weather;
 
 public class MainWeather {
-    private double temp;
+    private String temp;
     private double feels_like;
-    private double temp_min;
-    private double temp_max;
+    private String temp_min;
+    private String temp_max;
     private int pressure;
     private int humidity;
+    private int sea_level;
+    private int grnd_level;
 
-    public double getTemp() {
-        return temp;
+    public String getTemp() {
+        return String.valueOf((int) Math.round(Double.parseDouble(temp) - 273.15)) + "°C";
     }
 
-    public void setTemp(double temp) {
+    public void setTemp(String temp) {
         this.temp = temp;
     }
 
@@ -24,19 +26,22 @@ public class MainWeather {
         this.feels_like = feels_like;
     }
 
-    public double getTemp_min() {
-        return temp_min;
+    public String getTemp_min() {
+
+        return String.valueOf((int) Math.round(Double.parseDouble(String.valueOf(temp_min)) - 273.15)) + "°C";
+
     }
 
-    public void setTemp_min(double temp_min) {
+    public void setTemp_min(String temp_min) {
         this.temp_min = temp_min;
     }
 
-    public double getTemp_max() {
-        return temp_max;
+    public String getTemp_max() {
+
+        return String.valueOf((int) Math.round(Double.parseDouble(temp_max) - 273.15)) + "°C";
     }
 
-    public void setTemp_max(double temp_max) {
+    public void setTemp_max(String temp_max) {
         this.temp_max = temp_max;
     }
 
@@ -54,5 +59,21 @@ public class MainWeather {
 
     public void setHumidity(int humidity) {
         this.humidity = humidity;
+    }
+
+    public int getSea_level() {
+        return sea_level;
+    }
+
+    public void setSea_level(int sea_level) {
+        this.sea_level = sea_level;
+    }
+
+    public int getGrnd_level() {
+        return grnd_level;
+    }
+
+    public void setGrnd_level(int grnd_level) {
+        this.grnd_level = grnd_level;
     }
 }

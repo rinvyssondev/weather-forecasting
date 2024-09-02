@@ -4,6 +4,8 @@ import com.weatherforecasting.weatherforecasting.remote.DTO.weather.GetWeatherDT
 import com.weatherforecasting.weatherforecasting.service.WeatherService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +27,11 @@ public class GetWeatherController {
 
     @Operation(summary = "Get weather data by city name")
     @GetMapping("city={city}")
-    public GetWeatherDTO getWeatherByCity(@PathVariable String city) {
-        return weatherService.getWeatherByCity(city);
+    public ResponseEntity<?> getWeatherByCity(@PathVariable String city) {
+        try {
+            return new ResponseEntity<>(weatherService.getWeatherByCity(city), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Erro ao encontrar cidade",HttpStatus.NOT_FOUND);
+        }
     }
 }

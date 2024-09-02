@@ -7,6 +7,8 @@ public class GetWeatherDTO {
     private MainWeather main;
     private int visibility;
     private Wind wind;
+
+    private Rain rain;
     private Clouds clouds;
     private int dt;
     private Sys sys;
@@ -61,6 +63,14 @@ public class GetWeatherDTO {
 
     public void setWind(Wind wind) {
         this.wind = wind;
+    }
+
+    public Rain getRain() {
+        return rain;
+    }
+
+    public void setRain(Rain rain) {
+        this.rain = rain;
     }
 
     public Clouds getClouds() {
