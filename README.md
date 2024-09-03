@@ -3,7 +3,7 @@
 - Weather Forecasting System: A software with classes for locations, forecasts, and weather data,
 providing weather predictions and data analysis.
 
-- Jetpack Compose was used to develop the Android front-end and Sprinboot Java for the back end. I used bff (back for frontend) architecture, as it was required to have a Java backend.
+- Jetpack Compose was used to develop the Android front-end and Sprinboot Java for the back end. I used bff architecture (back for frontend) and connected it to the Openweather API. The project is required to have a Java backend.
 
 ## - Weather Forecasting System
 
