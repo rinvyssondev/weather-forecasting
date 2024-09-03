@@ -1,4 +1,4 @@
-##Trabalho para a faculdade - UFAL 
+## - Trabalho para a faculdade - UFAL 
 
 - Weather Forecasting System: A software with classes for locations, forecasts, and weather data,
 providing weather predictions and data analysis.
