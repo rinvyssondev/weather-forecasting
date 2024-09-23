@@ -8,7 +8,7 @@ public class PrevisionData {
     private long dt;
     private MainWeather main;
     private List<Weather> weather;
-    private Clouds clouds;
+    private Cloud cloud;
     private Wind wind;
     private int visibility;
     private double pop;
@@ -42,12 +42,12 @@ public class PrevisionData {
         this.weather = weather;
     }
 
-    public Clouds getClouds() {
-        return clouds;
+    public Cloud getClouds() {
+        return cloud;
     }
 
-    public void setClouds(Clouds clouds) {
-        this.clouds = clouds;
+    public void setClouds(Cloud cloud) {
+        this.cloud = cloud;
     }
 
     public Wind getWind() {

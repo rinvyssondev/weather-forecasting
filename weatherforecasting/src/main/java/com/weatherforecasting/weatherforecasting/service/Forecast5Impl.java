@@ -16,7 +16,7 @@ public class Forecast5Impl implements Forecast5Service{
 
     @Override
     public GetForecast5DTO getForecast5ByCity(String city) {
-        String url = String.format("https://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&appid=%s", city, apikey);
+        String url = String.format("https://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&lang=pt_br&appid=%s", city, apikey);
         System.out.println(url);
         return fetchForecast5Data(url);
     }

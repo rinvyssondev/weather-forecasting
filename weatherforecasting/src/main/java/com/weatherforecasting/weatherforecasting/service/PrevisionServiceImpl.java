@@ -16,7 +16,7 @@ public class PrevisionServiceImpl implements PrevisionService {
 
     @Override
     public GetPrevisionDTO getPrevisionByCity(String city) {
-        String url = String.format("https://api.openweathermap.org/data/2.5/forecast?q=%s&appid=%s", city, apikey);
+        String url = String.format("https://api.openweathermap.org/data/2.5/forecast?q=%s&lang=pt_br&appid=%s", city, apikey);
         System.out.println(url);
         return fetchPrevisionData(url);
     }

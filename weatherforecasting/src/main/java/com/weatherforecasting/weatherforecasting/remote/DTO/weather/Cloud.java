@@ -1,6 +1,6 @@
 package com.weatherforecasting.weatherforecasting.remote.DTO.weather;
 
-public class Clouds {
+public class Cloud {
     private int all;
 
     public int getAll() {

@@ -9,7 +9,7 @@ public class GetWeatherDTO {
     private Wind wind;
 
     private Rain rain;
-    private Clouds clouds;
+    private Cloud cloud;
     private int dt;
     private Sys sys;
     private int timezone;
@@ -73,12 +73,12 @@ public class GetWeatherDTO {
         this.rain = rain;
     }
 
-    public Clouds getClouds() {
-        return clouds;
+    public Cloud getClouds() {
+        return cloud;
     }
 
-    public void setClouds(Clouds clouds) {
-        this.clouds = clouds;
+    public void setClouds(Cloud cloud) {
+        this.cloud = cloud;
     }
 
     public int getDt() {

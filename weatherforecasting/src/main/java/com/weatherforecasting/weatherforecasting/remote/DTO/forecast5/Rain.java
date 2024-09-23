@@ -1,7 +1,6 @@
 package com.weatherforecasting.weatherforecasting.remote.DTO.forecast5;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.beans.factory.annotation.Value;
 
 public class Rain {
 

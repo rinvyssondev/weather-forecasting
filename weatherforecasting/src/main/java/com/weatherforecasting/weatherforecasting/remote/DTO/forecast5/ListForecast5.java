@@ -40,12 +40,12 @@ public class ListForecast5 {
         this.weather = weather;
     }
 
-    public Clouds getClouds() {
-        return clouds;
+    public Cloud getClouds() {
+        return cloud;
     }
 
-    public void setClouds(Clouds clouds) {
-        this.clouds = clouds;
+    public void setClouds(Cloud cloud) {
+        this.cloud = cloud;
     }
 
     public Wind getWind() {
@@ -89,7 +89,7 @@ public class ListForecast5 {
     }
 
     private List<Weather> weather;
-    private Clouds clouds;
+    private Cloud cloud;
     private Wind wind;
     private int visibility;
     private double pop;

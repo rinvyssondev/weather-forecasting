@@ -16,12 +16,12 @@ public class WeatherServiceImpl implements WeatherService {
 
     @Override
     public GetWeatherDTO getWeatherByLatLon(String lat, String lon) {
-        String url = String.format("https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=%s", lat, lon, apikey);
+        String url = String.format("https://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&lang=pt_br&appid=%s", lat, lon, apikey);
         return fetchWeatherData(url);
     }
 
     public GetWeatherDTO getWeatherByCity(String city) {
-        String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", city, apikey);
+        String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&lang=pt_br&appid=%s", city, apikey);
         return fetchWeatherData(url);
     }
 
