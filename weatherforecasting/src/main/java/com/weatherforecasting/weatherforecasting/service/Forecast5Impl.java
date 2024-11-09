@@ -1,5 +1,7 @@
 package com.weatherforecasting.weatherforecasting.service;
 
+import com.weatherforecasting.weatherforecasting.RestTemplateSingleton;
+import com.weatherforecasting.weatherforecasting.UrlBuilder;
 import com.weatherforecasting.weatherforecasting.remote.DTO.forecast5.GetForecast5DTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -12,12 +14,17 @@ public class Forecast5Impl implements Forecast5Service{
     @Value("${weather.api.key}")
     private String apikey;
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate = RestTemplateSingleton.getInstance();
 
     @Override
     public GetForecast5DTO getForecast5ByCity(String city) {
-        String url = String.format("https://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&lang=pt_br&appid=%s", city, apikey);
-        System.out.println(url);
+//        String url = String.format("https://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&lang=pt_br&appid=%s", city, apikey);
+        String url = new UrlBuilder("https://api.openweathermap.org/data/2.5/forecast")
+                .addQueryParam("q", city)
+                .addQueryParam("units", "metric")
+                .addQueryParam("lang", "pt_br")
+                .addQueryParam("appid", apikey)
+                .build();
         return fetchForecast5Data(url);
     }
 

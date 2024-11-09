@@ -1,0 +1,4 @@
+interface PlayStyle {
+    void play();
+
+}
