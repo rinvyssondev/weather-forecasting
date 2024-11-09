@@ -46,6 +46,7 @@ public class CountryImpl implements CountryService{
                 countryData.add(data);
                 index++;
             }
+
             for (Integer i : indices) {
                 selectedCountryData.add(countryData.get(i));
             }
