@@ -36,6 +36,7 @@ Este é um projeto de exemplo usando Spring Boot para construir uma aplicação 
 - Java JDK 11 ou superior
 - Maven ou Gradle (dependendo da configuração do projeto)
 - IDE (como IntelliJ IDEA ou Eclipse)
+- Entre no repositório do https://github.com/rinvyssondev/weather-forecasting-mobile e siga as instruções.
 
 ## Estrutura do Projeto
 
