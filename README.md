@@ -48,6 +48,16 @@ O projeto é dividido em módulos:
 - `remote.DTO`: módulo de transferência de dados remotos
 - `service`: módulo de serviço
 
+## Design Patterns Utilizados
+
+- **Singleton**: Foi utilizado para garantir que certas classes, como a configuração da API do OpenWeather, tenham apenas uma instância durante o ciclo de vida da aplicação. Isso é útil para evitar recriações desnecessárias e garantir que todas as partes da aplicação acessem a mesma configuração.
+
+- **Factory**: Esse padrão foi usado para criar instâncias de diferentes tipos de previsões (curto prazo, longo prazo, etc.) com base em condições específicas, ajudando a desacoplar o código da lógica de criação de objetos. Isso facilita a extensão do sistema para incluir novos tipos de previsão sem modificar o código existente.
+
+- **Builder**: O padrão Builder foi empregado para criar objetos complexos, como objetos de previsão de clima que podem exigir diversos parâmetros e configurações. Com o Builder, o código se torna mais legível e é fácil adicionar novos parâmetros sem modificar a lógica de criação existente.
+
+- **Iterator**: Utilizei o padrão Iterator para permitir a navegação através de coleções de dados de clima, como listas de dados históricos ou de alertas meteorológicos, de maneira uniforme e sem expor a implementação interna das coleções. Isso ajuda a simplificar o código e a manipulação de dados agregados no sistema.
+
 ## Configuração do Ambiente
 
 1. **Clone o repositório:**
